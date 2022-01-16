@@ -50,15 +50,9 @@ luckForm.addEventListener('submit', function(event){
 
 // Handle luck output
   if(!isNaN(userNumber)){
-		let luckyNumbers = [7, 8, 13, 29];
-		let luckyNumber = luckyNumbers.find(myFunction);
-		luckyNumber.includes(userNumber);
-
-		function myFunction(value) {
-			if (userNumber.value = luckyNumbers){
-				document.getElementById("luckOutput").innerHTML = luckyNumber + " is lucky.";
-			}
-}}});
+		let luckyNumbers = [1, 3, 7, 8, 9, 13, 15, 21, 25, 31, 33, 37, 43, 49, 51, 63, 67, 69, 73, 75, 79, 87, 93, 99];
+		document.getElementById("luckOutput").innerHTML = luckyNumbers.includes(userNumber);
+}});
 
 
 //Cats form
@@ -83,4 +77,4 @@ catForm.addEventListener('submit', function(event){
 		function myFunction(value, index, array) {
 		  return value < 4;
 		}
-}});
+ }});
