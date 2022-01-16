@@ -1,8 +1,15 @@
 form {
-  border: 1px solid orange;
   padding: 1rem;
 }
 
-.submitted {
-  border: 1px solid gray;
+#catOutput {
+  padding: 1rem;
+}
+
+#cubeOutput {
+  padding: 1rem;
+}
+
+#monkeyOutput {
+  padding: 1rem;
 }
