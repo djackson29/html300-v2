@@ -1,0 +1,52 @@
+<!-- The goal of this assignment is to use the latest ES6+ Javascript functionality.
+
+  -Use ES6+ array and object methods to manipulate the data input, and ouput the result with an explanation.
+  -Use at least 4 ES6+ methods.
+  -See example CodePen (your code should not use jQuery)
+  -Remember it's best practice to add comments to your code. Don't worry about validating data. Assume only numbers will be entered in the input box.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="es6.css">
+  <title>ES6 Assignment 1</title>
+</head>
+<body>
+  <h1>Doubles</h1>
+  <form id="doubles">
+    <label>Double any number:
+      <input type="number" class="input">
+    </label>
+    <input type="submit" value="Submit">
+  </form>
+  <h1>Cube Root</h1>
+  <form id="cubeRoot">
+    <label>Find the Cube Root of any number:
+      <input type="number" class="input">
+    </label>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="cubeOutput"></p>
+  <h1>Luck</h1>
+  <form id="luck">
+    <label>Enter any number and I will tell you if it is lucky (true) or unlucky (false):<br><br>
+      <input type="number" class="input">
+    </label>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="luckOutput"></p>
+  <h1>Cats</h1>
+  <form id="cats">
+    <label>How many cats do you have?
+      <input type="number" class="input">
+    </label>
+    <input type="submit" value="Submit">
+  </form>
+  <p id="catOutput"></p>
+  <script src="es6.js"></script>
+</body>
+</html>
