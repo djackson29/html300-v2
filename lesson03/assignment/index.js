@@ -9,8 +9,13 @@ const container = document.querySelector('.template-hook')
 
 // loop through array and populate index.html page with profilesJSON data
 profiles.forEach(function(el){
+  
   let card = document.createElement('section')
+
+  // add class name 'card' to section
   card.className += 'card'
+
+  // html template
   card.innerHTML = `
     <article class="card__name">
       <img class="dog-img" src="../img/headshot.jpg" alt="">
