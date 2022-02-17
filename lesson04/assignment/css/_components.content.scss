@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: $gray;
+    font-size: $heading1;
+}
+
+/*grid layout*/
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.history {
+  grid-column: 1 / 2;
+}
+
+.history {
+  grid-column: 1 / 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+//   /*left-column grid*/
+//   &__name {
+//     padding: 1rem;
+//     grid-column: 1 / 2;
+//   }
+//
+//   /*job title left column*/
+//   &__job-title {
+//     font-size: $detailtext;
+//   }
+//
+//   /*right-column grid*/
+//    &__details {
+//      padding: 1rem;
+//      margin: 2rem;
+//      grid-column: 2 / 3;
+//      background-color: $lightgray;
+//      font-size: $detailtext;
+//    }
+// }
+
+// /*dog image*/
+// .dog-img {
+//   width: 100%;
+//   max-width: 250px;
+//   border-radius: 50%;
+// }
+//
+// /*LinkedIn image*/
+// .linkedin-img {
+//   float:left;
+//   padding-right: .5rem;
+// }
+//
+// @media screen and (max-width: 575px) {
+//   .card {
+//     grid-template-columns: auto;
+//
+//     /*left-column grid*/
+//     &__name {
+//       grid-column: 1 / 2;
+//     }
+//
+//     /*right-column grid*/
+//      &__details {
+//        grid-column: 1 / 2;
+//      }
+//   }
+// }
+//
+// @media screen and (min-width: 576px) and (max-width: 767px) {
+//   .card {
+//     grid-template-columns: auto;
+//     grid-column: 1 / 2;
+//
+//     /*left-column grid*/
+//     &__name {
+//       grid-column: 1 / 2;
+//     }
+//
+//     /*right-column grid*/
+//      &__details {
+//        grid-column: 1 / 2;
+//      }
+//   }
+// }
