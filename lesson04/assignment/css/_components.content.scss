@@ -1,10 +1,32 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  @include text;
 }
 
 h1 {
-    color: $gray;
-    font-size: $heading1;
+  @include heading1;
+}
+
+h2 {
+  @include heading2;
+}
+
+h3 {
+  @include heading3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: $primaryYellow;
 }
 
 /*grid layout*/
@@ -24,19 +46,42 @@ h1 {
 }
 
 .garden-img {
-
+  transform: translateX(-1000px);
+  animation: slideIn 1.5s ease-in-out forwards;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  z-index: -10;
-  background-color: $robins;
+// mixins to style the body text and each heading size
+@mixin text {
+  color: $text;
+  font-size: 1rem;
 }
+
+@mixin heading1 {
+  font-family: serif;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+@mixin heading2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+@mixin heading3 {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+// images slide in to the page from the left
+@keyframes slideIn {
+  0% {
+    transform: translateX(-500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
 
 // .trigger{
 //   // .box{
