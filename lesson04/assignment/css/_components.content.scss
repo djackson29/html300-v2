@@ -1,23 +1,13 @@
-html {
-  box-sizing: border-box;
-}
-
 * {
   @include text;
+  box-sizing: border-box;
 }
 
 h1 {
   @include heading1;
 }
 
-h2 {
-  @include heading2;
-}
-
-h3 {
-  @include heading3;
-}
-
+// style background
 .overlay {
   position: absolute;
   top: 0;
@@ -26,17 +16,21 @@ h3 {
   bottom: 0;
   height: 100%;
   z-index: -10;
-  background-color: $primaryYellow;
+  background-color: $secondaryCyan;
 }
 
-/*grid layout*/
+// grid layout, main section slides in from the right
 .main {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 1rem;
-  padding: 2rem;
+  padding: 4rem;
+  animation: expand 1.5s ease forwards .5s;
+  background-color: $primaryYellow;
+  position: relative;
 }
 
+// history and invention sections in first column
 .history {
   grid-column: 1 / 2;
 }
@@ -45,34 +39,69 @@ h3 {
   grid-column: 1 / 2;
 }
 
-.garden-img {
-  transform: translateX(-1000px);
-  animation: slideIn 1.5s ease-in-out forwards;
+// after main section slides in, h2 and h3 will slide up
+h2 {
+  @include heading2;
+  transform: translateY(2400px);
+  animation: slideUp .4s ease-in-out forwards 2s;
 }
 
-// mixins to style the body text and each heading size
-@mixin text {
-  color: $text;
-  font-size: 1rem;
+h3 {
+  @include heading3;
+  transform: translateY(2400px);
+  animation: slideUp .4s ease-in-out forwards 2s;
 }
 
-@mixin heading1 {
-  font-family: serif;
-  font-size: 2.5rem;
-  font-style: italic;
+// after headings slide in, body text and images will slide in
+p {
+  transform: translateX(2400px);
+  animation: slideIn .8s ease-in-out forwards 2.25s;
 }
 
-@mixin heading2 {
-  font-family: sans-serif;
-  font-size: 2rem;
+.kinetoscope-img {
+  width: 200px;
+  float: left;
+  padding-right: 1.5rem;
+  transform: translateX(2400px);
+  animation: slideIn 1s ease-in-out forwards 2.25s;
 }
 
-@mixin heading3 {
-  font-family: sans-serif;
-  font-size: 1.5rem;
+// roundhay horse images will also change opacity on hover
+.roundhay-img {
+  width: 200px;
+  float: left;
+  padding-right: 10px;
+  opacity: 0.1;
+  transition: opacity;
+  transform: translateX(2400px);
+  animation: slideIn 1s ease-in-out forwards 2.25s;
 }
 
-// images slide in to the page from the left
+.roundhay-img:hover {
+  opacity: 1;
+}
+
+// main section animation expand
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+// headings animation slideUp
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// images and body text animation slideIn
 @keyframes slideIn {
   0% {
     transform: translateX(-500px) scale(.2);
@@ -81,110 +110,3 @@ h3 {
     transform: translateX(0px) scale(1);
   }
 }
-
-
-// .trigger{
-//   // .box{
-//   //   background-color: red;
-//   //   width: 100px;
-//   //   height: 100px;
-//   //   position: relative;
-//   //   transition: width 2s linear 1s;
-//   // }
-//   .garden-img {
-//     transition: width 3s linear 1s;
-//   }
-// }
-//
-// // .trigger:hover .box{
-// //   width: 300px;
-// // }
-//
-// .trigger:hover .garden-img{
-//   display: none;
-// }
-
-// @keyframes myframes{
-//   div.box:hover{
-//     height: 100px;
-//   }
-//   50%, 100%{
-//     width: 200px;
-//   }
-//   100%{
-//     height: 600px;
-//     background: green;
-//   }
-// }
-
-
-
-
-
-
-//   /*left-column grid*/
-//   &__name {
-//     padding: 1rem;
-//     grid-column: 1 / 2;
-//   }
-//
-//   /*job title left column*/
-//   &__job-title {
-//     font-size: $detailtext;
-//   }
-//
-//   /*right-column grid*/
-//    &__details {
-//      padding: 1rem;
-//      margin: 2rem;
-//      grid-column: 2 / 3;
-//      background-color: $lightgray;
-//      font-size: $detailtext;
-//    }
-// }
-
-// /*dog image*/
-// .dog-img {
-//   width: 100%;
-//   max-width: 250px;
-//   border-radius: 50%;
-// }
-//
-// /*LinkedIn image*/
-// .linkedin-img {
-//   float:left;
-//   padding-right: .5rem;
-// }
-//
-// @media screen and (max-width: 575px) {
-//   .card {
-//     grid-template-columns: auto;
-//
-//     /*left-column grid*/
-//     &__name {
-//       grid-column: 1 / 2;
-//     }
-//
-//     /*right-column grid*/
-//      &__details {
-//        grid-column: 1 / 2;
-//      }
-//   }
-// }
-//
-// @media screen and (min-width: 576px) and (max-width: 767px) {
-//   .card {
-//     grid-template-columns: auto;
-//     grid-column: 1 / 2;
-//
-//     /*left-column grid*/
-//     &__name {
-//       grid-column: 1 / 2;
-//     }
-//
-//     /*right-column grid*/
-//      &__details {
-//        grid-column: 1 / 2;
-//      }
-//   }
-// }

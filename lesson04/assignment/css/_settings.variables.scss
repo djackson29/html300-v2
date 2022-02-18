@@ -1,16 +1,26 @@
 // Colors
-$primaryYellow: hsl(36, 77%, 49%);
+$primaryYellow: hsl(48, 100%, 88%);
+$secondaryCyan: hsl(185, 57%, 50%);
 $text: #27241D;
 
-$lightgray: #E6E6E6;
-$gray: #757575;
-$white: #ffffff;
-$black: #000000;
-$green: #7acb00;
-$pink: #ff0097;
-$red: #F1352B;
-$orange: #ff6600;
-$yellow: #ffb617;
-$robins: #01c1d6;
-$purple: #6e27c5;
-$blue: #150f96;
+// mixins to style the body text and headings
+@mixin text {
+  color: $text;
+  font-size: 1rem;
+}
+
+@mixin heading1 {
+  font-family: serif;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+@mixin heading2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+@mixin heading3 {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
