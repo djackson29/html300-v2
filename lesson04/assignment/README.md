@@ -13,8 +13,8 @@ Find (at least) __one__ example of transition-based animation that you want to i
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson04/assignment`
 -   Run `npm install`
 -   Run `npx gulp`
-- 	Work in the same setup as you're used to, feel free to structure the SCSS at your preference -->
-- 	Make sure that your code runs and the animation works in the browser when finished
+- 	Work in the same setup as you're used to, feel free to structure the SCSS at your preference
+- 	Make sure that your code runs and the animation works in the browser when finished -->
 
 ### Requirements:
 - CSS Animation(s) present is based on transitioning properties, should look smooth
@@ -33,5 +33,6 @@ Find (at least) __one__ example of transition-based animation that you want to i
 
 ### DJ list of to do's:
 - Create color palette for site
-- add background Color
-- 
+<!-- - add background Color -->
+- add more text and images to invention sections
+- keep adding comments
