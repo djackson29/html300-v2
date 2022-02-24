@@ -1,8 +1,10 @@
+// set body text color and size
 * {
   @include text;
   box-sizing: border-box;
 }
 
+// heading 1 style
 h1 {
   @include heading1;
 }
@@ -19,24 +21,15 @@ h1 {
   background-color: $secondaryCyan;
 }
 
-// grid layout, main section slides in from the right
+// grid layout, main section expands from the right
 .main {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 1rem;
   padding: 4rem;
   animation: expand 1.5s ease forwards .5s;
   background-color: $primaryYellow;
   position: relative;
-}
-
-// history and invention sections in first column
-.history {
-  grid-column: 1 / 2;
-}
-
-.invention {
-  grid-column: 1 / 2;
 }
 
 // after main section slides in, h2 and h3 will slide up
@@ -81,7 +74,7 @@ p {
   opacity: 1;
 }
 
-// main section animation expand
+// main section animation, expands from the right
 @keyframes expand {
   0% {
     transform: translateX(1400px);
@@ -91,7 +84,7 @@ p {
   }
 }
 
-// headings animation slideUp
+// headings animation, slides up
 @keyframes slideUp {
   0% {
     transform: translateY(100px);
@@ -101,7 +94,7 @@ p {
   }
 }
 
-// images and body text animation slideIn
+// images and body text animation, slides in from the left
 @keyframes slideIn {
   0% {
     transform: translateX(-500px) scale(.2);
