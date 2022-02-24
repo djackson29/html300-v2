@@ -24,12 +24,24 @@ h1 {
 // grid layout, main section expands from the right
 .main {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100px auto 100px;
   grid-gap: 1rem;
-  padding: 3rem 20rem;
+  padding: 3rem;
   animation: expand 1.5s ease forwards .5s;
   background-color: $primaryYellow;
   position: relative;
+}
+
+.history {
+  grid-column: 2 / 3;
+}
+
+#history-heading {
+  grid-column: 2 / 3;
+}
+
+.invention {
+  grid-column: 2 / 3;
 }
 
 // after main section slides in, h2 and h3 will slide up
@@ -103,3 +115,38 @@ p {
     transform: translateX(0px) scale(1);
   }
 }
+
+
+
+// responsive screens
+@media screen and (max-width: 575px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+  }
+
+
+@media screen and (min-width: 992px) {
+
+  }
