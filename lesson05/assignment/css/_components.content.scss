@@ -21,6 +21,7 @@ h3 {
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   padding: 2rem;
+  background-color: $primaryYellow;
 }
 
 .header-container {
@@ -46,16 +47,20 @@ h3 {
   }
 }
 
+.button {
+  @include button
+}
+
 .main {
   grid-column: 1 / 3;
   display: flex;
   justify-content: space-evenly;
-  // flex-wrap: wrap;
   &__sidebar {
-    flex-basis: 80%;
-    padding-right: 1rem;
+    flex-basis: fit-content;
+    padding-right: 2rem;
   }
   &__content {
+    flex-basis: content;
   }
 }
 
