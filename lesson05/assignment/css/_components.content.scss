@@ -20,6 +20,7 @@ h3 {
   @include button
 }
 
+// grid layout 3 columns, 1 column for mobile
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -35,6 +36,7 @@ h3 {
   grid-column: 1 / 4;
 }
 
+// navigation bar, used flex to align content
 .nav {
   background: $secondaryCyan;
   display: flex;
@@ -54,6 +56,7 @@ h3 {
   }
 }
 
+// grid layout for main content and sidebar 'movie of the week' section
 .main {
   grid-column: 1 / 4;
   display: grid;
@@ -72,6 +75,7 @@ h3 {
   }
 }
 
+// footer styling
 footer {
   grid-column: 1 / 4;
 }
