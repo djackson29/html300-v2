@@ -35,24 +35,30 @@ h3 {
 
 .header-container {
   grid-column: 1 / 4;
-  // @include media-query(mobile) {
-  //   flex-direction column;
-  // }
-  // @include media-query(tab) {
-  //   grid-column: 1 / 4;
-  // }
-  // @include media-query(lg) {
-  //   grid-column: 1 / 4;
-  // }
-  // @include media-query(desk) {
-  //   grid-column: 1 / 4;
-  // }
-  // @include media-query(xl) {
-  //   grid-column: 1 / 4;
-  // }
 }
 
-
+// grid layout for main content and sidebar 'movie of the week' section
+.main {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-gap: 2rem;
+  @include media-query(mobile) {
+    grid-template-columns: auto;
+  }
+  @include media-query(tab) {
+    grid-template-columns: auto;
+  }
+  &__sidebar {
+    grid-column: 1 / 2;
+    // padding-right: 2rem;
+  }
+  &__content {
+    grid-column: 2 / 4;
+    @include media-query(mobile) {
+      grid-column: 1 / 2;
+    }
+  }
+}
 
 // navigation bar, used flex to align content
 .nav {
@@ -75,25 +81,6 @@ h3 {
     color: hsl(165, 67%, 96%);
     &:hover {
       text-decoration: none;
-    }
-  }
-}
-
-// grid layout for main content and sidebar 'movie of the week' section
-.main {
-  grid-column: 1 / 4;
-  display: grid;
-  @include media-query(mobile) {
-    grid-template-columns: auto;
-  }
-  &__sidebar {
-    grid-column: 1 / 2;
-    padding-right: 2rem;
-  }
-  &__content {
-    grid-column: 2 / 4;
-    @include media-query(mobile) {
-      grid-column: 1 / 2;
     }
   }
 }
