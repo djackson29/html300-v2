@@ -26,7 +26,8 @@ h3 {
   grid-template-columns: auto auto auto;
   grid-gap: 1rem;
   padding: 2rem;
-  background-color: $primaryYellow;
+  // background-color: $primaryYellow;
+  background-color: $backgroundPurple;
   @include media-query(mobile) {
     grid-template-columns: auto;
   }
@@ -34,24 +35,46 @@ h3 {
 
 .header-container {
   grid-column: 1 / 4;
+  // @include media-query(mobile) {
+  //   flex-direction column;
+  // }
+  // @include media-query(tab) {
+  //   grid-column: 1 / 4;
+  // }
+  // @include media-query(lg) {
+  //   grid-column: 1 / 4;
+  // }
+  // @include media-query(desk) {
+  //   grid-column: 1 / 4;
+  // }
+  // @include media-query(xl) {
+  //   grid-column: 1 / 4;
+  // }
 }
+
+
 
 // navigation bar, used flex to align content
 .nav {
-  background: $secondaryCyan;
+  background-color: $secondaryBlue;
   display: flex;
   justify-content: space-evenly;
+  border-radius: 10px;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   flex-wrap: wrap;
-  flex: 1 1 auto;
+  flex: auto;
   &__item {
-    @include text
     display: inline-block;
     margin-right: 2rem;
-    text-decoration: underline;
     &:last-of-type {
       margin: 0;
+    }
+  }
+  a {
+    color: hsl(165, 67%, 96%);
+    &:hover {
+      text-decoration: none;
     }
   }
 }
@@ -75,7 +98,27 @@ h3 {
   }
 }
 
-// footer styling
-footer {
+// grid layout for footer container
+.footer-container {
   grid-column: 1 / 4;
+  display: grid;
+  @include media-query(mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+// footer uses flex to align content within
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: $secondaryBlue;
+  padding: 0 1rem;
+  border-radius: 10px;
+  p, h3, li, a {
+    color: hsl(165, 67%, 96%);
+  }
+  @include media-query(mobile) {
+    justify-content: start;
+  }
 }
