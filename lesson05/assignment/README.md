@@ -23,7 +23,7 @@ Build a web page that you'd like to include in your final project that has a lay
 
 ### To Do (DJ notes):
 - logo
-- footer content
+<!-- - footer content
 - align footer content
-- add about info
+- add about info -->
 - pick better colors for overall style guide
