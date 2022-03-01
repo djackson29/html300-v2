@@ -1,0 +1,152 @@
+// set body text color and size
+* {
+  @include text;
+  box-sizing: border-box;
+}
+
+// heading 1 style
+h1 {
+  @include heading1;
+}
+
+// style background
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: $secondaryCyan;
+}
+
+// grid layout, main section expands from the right
+.main {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  grid-gap: 1rem;
+  padding: 3rem;
+  animation: expand 1.5s ease forwards .5s;
+  background-color: $primaryYellow;
+  position: relative;
+}
+
+.history {
+  grid-column: 2 / 3;
+}
+
+#history-heading {
+  grid-column: 2 / 3;
+}
+
+.invention {
+  grid-column: 2 / 3;
+}
+
+// after main section slides in, h2 and h3 will slide up
+h2 {
+  @include heading2;
+  transform: translateY(2400px);
+  animation: slideUp .4s ease-in-out forwards 2s;
+}
+
+h3 {
+  @include heading3;
+  transform: translateY(2400px);
+  animation: slideUp .4s ease-in-out forwards 2s;
+}
+
+// after headings slide in, body text and images will slide in
+p {
+  transform: translateX(2400px);
+  animation: slideIn .8s ease-in-out forwards 2.25s;
+}
+
+.kinetoscope-img {
+  width: 200px;
+  float: left;
+  padding-right: 1.5rem;
+  transform: translateX(2400px);
+  animation: slideIn 1s ease-in-out forwards 2.25s;
+}
+
+// roundhay horse images will also change opacity on hover
+.roundhay-img {
+  width: 200px;
+  float: left;
+  padding-right: 10px;
+  opacity: 0.1;
+  transition: opacity;
+  transform: translateX(2400px);
+  animation: slideIn 1s ease-in-out forwards 2.25s;
+}
+
+.roundhay-img:hover {
+  opacity: 1;
+}
+
+// main section animation, expands from the right
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+// headings animation, slides up
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// images and body text animation, slides in from the left
+@keyframes slideIn {
+  0% {
+    transform: translateX(-500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+
+
+// responsive screens
+@media screen and (max-width: 575px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    padding: 3rem;
+  }
+  }
+
+
+@media screen and (min-width: 992px) {
+
+  }
