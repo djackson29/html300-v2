@@ -20,3 +20,10 @@ Build a web page that you'd like to include in your final project that has a lay
 - Create a Pull Request for your assignment branch to your forked master
 - Submit the link to your pull request in your assignment submission box
 - Once assignment is graded, merge the Pull Request
+
+### To Do (DJ notes):
+- logo
+- footer content
+- align footer content
+- add about info
+- pick better colors for overall style guide
