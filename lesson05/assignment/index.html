@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Assignment 05 - CSS Grid</title>
+  </head>
+  <body>
+
+    <!-- container around all elements in body -->
+    <main class="container">
+
+    <!-- header section with name, logo, and main nav -->
+    <header class="header-container">
+      <section class="header-content">
+        <h1>Box Office Bits</h1>
+      </section>
+
+      <!-- main navigation -->
+      <div class="nav-wrap">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#">Discover New Titles</a></li>
+            <li class="nav__item"><a href="#">Coming Soon to Theaters</a></li>
+            <li class="nav__item"><a href="#">Top Rated Movies</a></li>
+            <li class="nav__item"><a href="#">History of Filmmaking</a></li>
+            <li class="nav__item"><a href="#">Newsletter Archives</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- main content with 'movie of the week' and 'about' sections -->
+
+      <section class="main">
+      <section class="main__sidebar">
+        <h2>About Box Office Bits</h2>
+        <p>Welcome to Box Office Bits! The ultimate movie lover's online guide.</p>
+        <p>Whether you are looking for a new title to fall in love with, or curious how others feel about the newest releases, you have come to the right place!</p>
+        <h2>What to Watch</h2>
+        <h3>Gladiator (2000)</h3>
+        <p>A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.</p>
+        <p>This one is a classic! Epic action scenes in the coloseum, romance, betrayal, need I say more?</p>
+        <img class="watch-img" alt="Gladiator movie cover" src="img/gladiator-cover.jpg">
+        <p>Our favorite line: <em>"My name is Maximus Decimus Meridius, commander of the Armies of the North, General of the Felix Legions and loyal servant to the TRUE emperor, Marcus Aurelius. Father to a murdered son, husband to a murdered wife. And I will have my vengeance, in this life or the next."</em></p>
+        <p></p>
+        <a class="button" href="#">Discover More Titles</a>
+      </section>
+      <section class="main__content">
+        <h2>Movie of the Week</h2>
+        <p>&lt;placeholder for API&gt;</p>
+        <!-- <img class="placeholder-img" src="img/imdb-api-placeholder.PNG"> -->
+        <h3>Fun Facts about the Movie of the Week</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis augue condimentum, convallis nibh a, efficitur erat. Curabitur a consequat mi. Aliquam erat volutpat. Cras ac maximus elit.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam quis augue condimentum, convallis nibh a, efficitur erat.</li>
+          <li>Aliquam erat volutpat.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis augue condimentum, convallis nibh a, efficitur erat. Curabitur a consequat mi. Aliquam erat volutpat. Cras ac maximus elit.</p>
+        <ul>
+          <li>Aliquam quis augue condimentum, convallis nibh a, efficitur erat.</li>
+          <li>Aliquam erat volutpat.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam quis augue condimentum, convallis nibh a, efficitur erat.</li>
+          <li>Aliquam erat volutpat.</li>
+        </ul>
+        <a class="button" href="#">Movie of the Week Archives</a>
+      </section>
+    </section>
+
+    <!-- footer container -->
+      <div class="footer-container">
+
+        <!-- footer content -->
+        <footer class="footer">
+          <section class="footer__links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Learn more about Box Office Bits</a></li>
+            </ul>
+          </section>
+          <section class="footer__social">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </section>
+          <section class="footer__news">
+            <h3>Newsletter</h3>
+            <p><a href="#">Sign up for the monthly newsletter</a></p>
+          </section>
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
