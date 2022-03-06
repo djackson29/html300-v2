@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Box Office Bits</title>
   </head>
+
+  <!-- a page with an accordion -->
   <body>
     <main class="main">
+
+      <!-- main navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Box Office Bits</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,56 +38,90 @@
         </div>
       </nav>
 
-      <!-- main content with 'movie of the week' and 'about' sections -->
+      <!-- main content with 'coming soon' section and accordion -->
       <section class="content">
         <h2>Coming Soon to Theaters</h2>
         <section>
-          <h3>This Week</h3>
 
           <!-- accordion with coming soon movie titles -->
           <div id="accordion">
+
+            <!-- first accordion heading -->
             <div class="card">
-             <div class="card-header" id="headingOne">
-               <h5 class="mb-0">
-                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="card-header bg-dark" id="headingOne">
+                <h3 class="mb-0">
+                  <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <em>Cheaper by the Dozen</em>
+                  </button>
+                </h3>
+              </div>
+
+              <!-- first accordion content -->
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <p><strong>Release Date:</strong> March 18</p>
+                  <p><strong>Genre(s):</strong> Adventure, Comedy, Family</p>
+                  <p><strong>Summary:</strong> The raucous exploits of a blended family of 12, the Bakers, as they navigate a hectic home life while simultaneously managing their family business</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- second accordion heading -->
+            <div class="card">
+              <div class="card-header bg-dark" id="headingTwo">
+                <h3 class="mb-0">
+                  <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <em>The Lost City</em>
+                  </button>
+                </h3>
+              </div>
+
+              <!-- second accordion content -->
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <p><strong>Release Date:</strong> March 25</p>
+                  <p><strong>Genre(s):</strong> Action, Adventure, Comedy</p>
+                  <p><strong>Summary:</strong> A reclusive romance novelist on a book tour with her cover model gets swept up in a kidnapping attempt that lands them both in a cutthroat jungle adventure.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- third accordion heading -->
+            <div class="card">
+             <div class="card-header bg-dark" id="headingThree">
+               <h3 class="mb-0">
+                 <button class="btn btn-dark" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                    <em>Fantastic Beasts: The Secrets of Dumbledore</em>
                  </button>
-               </h5>
+               </h3>
              </div>
-             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-               <div class="card-body">
-                 <p>Adventure, Family, Fantasy</p>
-                 <p>The third installment of the 'Fantastic Beasts and Where to Find Them' series which follows the adventures of Newt Scamander.</p>
-               </div>
-             </div>
-           </div>
-           <div class="card">
-             <div class="card-header" id="headingTwo">
-               <h5 class="mb-0">
-                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                   <em>The Bad Guys</em>
-                 </button>
-               </h5>
-             </div>
-             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-               <div class="card-body">
-                 <p>Animation, Family, Comedy</p>
-                 <p>Several reformed yet misunderstood criminal animals attempt to become good, with some disastrous results along the way.</p>
-               </div>
-             </div>
-           </div>
-           <div class="card">
-             <div class="card-header" id="headingThree">
-               <h5 class="mb-0">
-                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                   <em>The Lost City</em>
-                 </button>
-               </h5>
-             </div>
+
+             <!-- third accordion content -->
              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                <div class="card-body">
-                 <p>Action, Adventure, Comedy</p>
-                 <p>A reclusive romance novelist on a book tour with her cover model gets swept up in a kidnapping attempt that lands them both in a cutthroat jungle adventure.</p>
+                 <p><strong>Release Date:</strong> April 15</p>
+                 <p><strong>Genre(s):</strong> Adventure, Family, Fantasy</p>
+                 <p><strong>Summary:</strong> The third installment of the 'Fantastic Beasts and Where to Find Them' series which follows the adventures of Newt Scamander.</p>
+               </div>
+             </div>
+           </div>
+
+           <!-- fourth accordion heading -->
+           <div class="card">
+             <div class="card-header bg-dark" id="headingFour">
+               <h3 class="mb-0">
+                 <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                   <em>The Bad Guys</em>
+                 </button>
+               </h3>
+             </div>
+
+             <!-- fourth accordion content -->
+             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+               <div class="card-body">
+                 <p><strong>Release Date:</strong> April 22</p>
+                 <p><strong>Genre(s):</strong> Animation, Family, Comedy</p>
+                 <p><strong>Summary:</strong> Several reformed yet misunderstood criminal animals attempt to become good, with some disastrous results along the way.</p>
                </div>
              </div>
            </div>
@@ -111,15 +149,8 @@
               <li><a href="#">Facebook</a></li>
             </ul>
           </section>
-          <section class="footer__news">
-            <h3>Newsletter</h3>
-            <p><a href="#">Sign up for the monthly newsletter</a></p>
-          </section>
         </footer>
       </div>
-
-
-
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
