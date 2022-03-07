@@ -1,19 +1,34 @@
 <template>
 <div id="app">
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="nav">
+    <router-link to="/boxOfficeBits">Home</router-link>
+    <router-link to="/discoverTitles">Discover New Titles</router-link>
+    <router-link to="/comingSoon">Coming Soon to Theaters</router-link>
+    <router-link to="/movieWeek">Movie of the Week Archives</router-link>
+  </div>
+  <router-view/>
+  <h1>Box Office Bits</h1>
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// import boxOfficeBits from './components/boxOfficeBits.vue'
+// import discoverTitles from './components/discoverTitles.vue'
+// import comingSoon from './components/comingSoon.vue'
+// import movieWeek from './components/movieWeek.vue'
+//
+//
+// export default {
+//   name: 'App',
+//   components: {
+//     boxOfficeBits,
+//     discoverTitles,
+//     comingSoon,
+//     movieWeek
+//   }
+// }
+
 </script>
 
 <style>
