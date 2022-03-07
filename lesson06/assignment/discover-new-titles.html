@@ -9,7 +9,7 @@
     <title>Box Office Bits</title>
   </head>
 
-  <!-- a landing page with some content and a popover  -->
+  <!-- a page with fluid/rresponsive images -->
   <body>
     <main class="main">
 
@@ -22,11 +22,11 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="discover-new-titles.html">Discover New Titles</a>
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Discover New Titles<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="coming-soon.html">Coming Soon to Theaters</a>
@@ -38,27 +38,27 @@
         </div>
       </nav>
 
-    <!-- main content with 'about' and 'what to watch' sections -->
+    <!-- main content with 'discover new titles' section and responsive images -->
       <section class="content">
-      <section class="content__sidebar">
-        <h2>About Box Office Bits</h2>
-        <p>Welcome to Box Office Bits! The ultimate movie lover's online guide.</p>
-        <p>Whether you are looking for a new title to fall in love with, or curious how others feel about the newest releases, you have come to the right place!</p>
-        <h2>What to Watch:</h2>
-        <h3>Gladiator (2000)</h3>
-        <p>A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.</p>
-        <p>This one is a classic! Epic action scenes in the colosseum, romance, betrayal, need I say more?</p>
 
-        <!-- did you know button with popover -->
-        <button type="button" id="did-you-know" class="btn btn-info" data-placement="right" data-toggle="popover" data-trigger="focus" title="Gladiator Fast Facts" data-content="Joaquin Phoenix ad-libbed his scream of 'Am I not merciful?' Connie Nielsen wasn't expecting it, and her frightened reaction was genuine.">Did you know?</button>
-        <h3>Without a Paddle (2004)</h3>
-        <p>After their friend dies, three men decide to fulfill their childhood dream by going on a camping expedition for the lost D. B. Cooper bounty, with calamitous results.</p>
-        <p>Proceed with caution: After watching, you will want to abandon all repsonsibilities and go treasure hunting with friends!</p>
+        <!-- responsive banner image -->
+        <img class="img-fluid" alt="movie film unrolled" src="img\movie-reel-xl.jpg">
+        <h2>Discover New Titles</h2>
 
-        <!-- did you know button with popover -->
-        <button type="button" id="did-you-know" class="btn btn-info" data-placement="right" data-toggle="popover" data-trigger="focus" title="Without a Paddle Fast Facts" data-content="Most of the outdoor camping scenes were shot inside a very large warehouse.">Did you know?</button>
+        <!-- responsive movie poster images -->
+        <h3>Action</h3>
+        <img class="img-thumbnail" alt="Black Panther movie cover" src="img\black-panther.jpg">
+        <img class="img-thumbnail" alt="The Hunger Games movie cover" src="img\hunger-games.jpg">
+        <img class="img-thumbnail" alt="Zombieland movie cover" src="img\zombieland.jpg">
+        <h3>Musicals</h3>
+        <img class="img-thumbnail" alt="The Greatest Showman movie cover" src="img\greatest-showman.jpg">
+        <img class="img-thumbnail" alt="Hamilton movie cover" src="img\hamilton.jpeg">
+        <img class="img-thumbnail" alt="West Side Story movie cover" src="img\west-side.jpg">
+        <h3>Thrillers</h3>
+        <img class="img-thumbnail" alt="Jaws movie cover" src="img\jaws.jpg">
+        <img class="img-thumbnail" alt="Joker movie cover" src="img\joker.jpeg">
+        <img class="img-thumbnail" alt="The Silence of the Lambs movie cover" src="img\lambs.jpg">
       </section>
-    </section>
 
     <!-- footer container -->
       <div class="footer-container">
@@ -86,10 +86,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
-    </script>
   </body>
 </html>

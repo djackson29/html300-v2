@@ -1,0 +1,124 @@
+
+
+/* components.scss for assignment 6? */
+* {
+  @include text;
+  box-sizing: border-box;
+}
+
+// heading styles
+h1 {
+  @include heading1;
+}
+
+h2 {
+  @include heading2;
+}
+
+h3 {
+  @include heading3;
+}
+
+.button {
+  @include button
+}
+
+// grid layout 3 columns, 1 column for mobile
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  padding: 2rem;
+  background-color: $backgroundPurple;
+  @include media-query(mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+// header spans 3 columns
+.header-container {
+  grid-column: 1 / 4;
+}
+
+// grid layout for main content and sidebar sections
+.content {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-gap: 2rem;
+  @include media-query(mobile) {
+    grid-template-columns: auto;
+  }
+  @include media-query(tab) {
+    grid-template-columns: auto;
+  }
+  &__sidebar {
+    grid-column: 1 / 2;
+    // padding-right: 2rem;
+  }
+  &__motw {
+    grid-column: 2 / 4;
+    @include media-query(mobile) {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+.watch-img {
+  max-width: 200px;
+}
+
+// grid layout for footer
+.footer-container {
+  grid-column: 1 / 4;
+  display: grid;
+  @include media-query(mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+// footer, uses flex to align content within
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: $secondaryBlue;
+  padding: 0 1rem;
+  border-radius: 10px;
+  p, li, a {
+    color: hsl(165, 67%, 96%);
+    font-size: 1rem;
+  }
+  h3 {
+    color: hsl(165, 67%, 96%);
+    font-size: 1.25rem;
+  }
+  @include media-query(mobile) {
+    justify-content: start;
+  }
+}
+
+
+// navigation bar, uses flex to align content
+.nav {
+  background-color: $secondaryBlue;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1rem 1rem;
+  flex-wrap: wrap;
+  flex: auto;
+  &__item {
+    display: inline-block;
+    margin-right: 2rem;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  a {
+    color: hsl(165, 67%, 96%);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
