@@ -24,9 +24,6 @@
       <p>{{msg}}</p>
     </div>
   </div>
-
-
-
 </div>
 </template>
 
