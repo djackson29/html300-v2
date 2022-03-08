@@ -12,12 +12,12 @@
       </b-card-header>
       <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
 
-        <!-- accordion body uses v-for to grab data from array -->
+        <!-- accordion body uses v-for to grab data from week 1 array -->
         <b-card-body>
-          <div v-for="march11 in march11Movies" v-bind:key="march11.id">
-            <h3>{{ march11.name }}</h3>
-            <b-card-text>{{ march11.genre }}</b-card-text>
-            <b-card-text>{{ march11.summary }}</b-card-text>
+          <div v-for="week1 in week1Movies" v-bind:key="week1.id">
+            <h3>{{ week1.name }}</h3>
+            <b-card-text>{{ week1.genre }}</b-card-text>
+            <b-card-text>{{ week1.summary }}</b-card-text>
             <hr>
           </div>
         </b-card-body>
@@ -30,11 +30,13 @@
         <b-button block v-b-toggle.accordion-2 variant="info">March 18</b-button>
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+
+        <!-- accordion body uses v-for to grab data from week 2 array -->
         <b-card-body>
-          <div v-for="march18 in march18Movies" v-bind:key="march18.id">
-            <h3>{{ march18.name }}</h3>
-            <b-card-text>{{ march18.genre }}</b-card-text>
-            <b-card-text>{{ march18.summary }}</b-card-text>
+          <div v-for="week2 in week2Movies" v-bind:key="week2.id">
+            <h3>{{ week2.name }}</h3>
+            <b-card-text>{{ week2.genre }}</b-card-text>
+            <b-card-text>{{ week2.summary }}</b-card-text>
             <hr>
           </div>
         </b-card-body>
@@ -47,11 +49,13 @@
         <b-button block v-b-toggle.accordion-3 variant="info">March 25</b-button>
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+
+        <!-- accordion body uses v-for to grab data from week 3 array -->
         <b-card-body>
-          <div v-for="march25 in march25Movies" v-bind:key="march25.id">
-            <h3>{{ march25.name }}</h3>
-            <b-card-text>{{ march25.genre }}</b-card-text>
-            <b-card-text>{{ march25.summary }}</b-card-text>
+          <div v-for="week3 in week3Movies" v-bind:key="week3.id">
+            <h3>{{ week3.name }}</h3>
+            <b-card-text>{{ week3.genre }}</b-card-text>
+            <b-card-text>{{ week3.summary }}</b-card-text>
             <hr>
           </div>
         </b-card-body>
@@ -71,8 +75,8 @@
     data() {
       return {
 
-        // first week
-        march11Movies: [{
+        // week 1 object
+        week1Movies: [{
             name: "Tyson's Run",
             summary: 'An unathletic boy with autism strives to become an unlikely marathon champion giving his unfulfilled father purpose and a second chance at putting his family first.',
             genre: 'Drama',
@@ -84,8 +88,8 @@
           }
         ],
 
-        // second week
-        march18Movies: [{
+        // week 2 object
+        week2Movies: [{
             name: "Operation Fortune: Ruse de guerre",
             summary: "Special agent Orson Fortune and his team of operatives recruit one of Hollywood's biggest movie stars to help them on an undercover mission when the sale of a deadly new weapons technology threatens to disrupt the world order.",
             genre: 'Action, Comedy, Thriller',
@@ -102,8 +106,8 @@
           }
         ],
 
-        // third week
-        march25Movies: [{
+        // week 3 object
+        week3Movies: [{
             name: "Infinite Storm",
             summary: 'When a climber gets caught in a blizzard, she encounters a stranded stranger and must get them both down the mountain before nightfall.',
             genre: 'Drama, Thriller',
