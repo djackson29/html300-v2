@@ -1,29 +1,38 @@
 <template>
 <div id="app">
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/discoverTitles">Discover New Titles</router-link> |
-    <router-link to="/comingSoon">Coming Soon to Theaters</router-link> |
-    <router-link to="/movieWeek">Movie of the Week Archives</router-link>
-  </nav>
-  <router-view />
-  <footer>
-    <div v-for="quick in quickLinks" v-bind:key="quick.id">
-      <h3>{{ quick.name }}</h3>
-      <ul>
-        <li><a v-bind:href="quick.linku1">{{ quick.link1 }}</a></li>
-        <li><a v-bind:href="quick.linku2">{{ quick.link2 }}</a></li>
-      </ul>
-    </div>
-    <div v-for="social in socialLinks" v-bind:key="social.id">
-      <h3>{{ social.name }}</h3>
-      <ul>
-        <li><a v-bind:href="social.linku1" target="_blank">{{ social.link1 }}</a></li>
-        <li><a v-bind:href="social.linku2" target="_blank">{{ social.link2 }}</a></li>
-        <li><a v-bind:href="social.linku3" target="_blank">{{ social.link3 }}</a></li>
-      </ul>
-    </div>
-  </footer>
+  <div class="container">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/discoverTitles">Discover New Titles</router-link> |
+      <router-link to="/comingSoon">Coming Soon to Theaters</router-link> |
+      <router-link to="/movieWeek">Movie of the Week Archives</router-link>
+    </nav>
+    <router-view />
+    <footer>
+      <div class="row">
+        <hr>
+        <div class="col-sm">
+          <div v-for="quick in quickLinks" v-bind:key="quick.id">
+            <h3>{{ quick.name }}</h3>
+            <ul>
+              <li><a v-bind:href="quick.linku1">{{ quick.link1 }}</a></li>
+              <li><a v-bind:href="quick.linku2">{{ quick.link2 }}</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div v-for="social in socialLinks" v-bind:key="social.id">
+            <h3>{{ social.name }}</h3>
+            <ul>
+              <li><a v-bind:href="social.linku1" target="_blank">{{ social.link1 }}</a></li>
+              <li><a v-bind:href="social.linku2" target="_blank">{{ social.link2 }}</a></li>
+              <li><a v-bind:href="social.linku3" target="_blank">{{ social.link3 }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
 </template>
 
@@ -63,7 +72,7 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  padding: 30px 0;
 }
 
 nav a {
@@ -73,5 +82,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+footer {
+  padding: 50px 0;
 }
 </style>
