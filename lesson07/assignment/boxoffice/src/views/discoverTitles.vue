@@ -1,16 +1,18 @@
 <template>
   <div class="discoverTitles">
     <h2>Discover New Titles</h2>
+
+    <!-- v-for to iterate through each image array and display movie posters for each genre -->
     <h3>Action</h3>
-    <div >
+    <div>
       <img v-for="action in actionPosters" v-bind:key="action.id" v-bind:src="action" alt="" class="img-thumbnail">
     </div>
     <h3>Musicals</h3>
-    <div >
+    <div>
       <img v-for="musical in musicalPosters" v-bind:key="musical.id" v-bind:src="musical" alt="" class="img-thumbnail">
     </div>
     <h3>Thrillers</h3>
-    <div >
+    <div>
       <img v-for="thriller in thrillerPosters" v-bind:key="thriller.id" v-bind:src="thriller" alt="" class="img-thumbnail">
     </div>
   </div>
@@ -34,6 +36,7 @@ export default {
 }
 
 </script>
+
 
 <style>
 img {
