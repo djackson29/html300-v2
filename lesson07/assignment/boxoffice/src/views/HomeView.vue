@@ -18,10 +18,10 @@
     <div v-if="show">
       <p>{{ movie.fact }}</p>
     </div>
-    
+
     <!-- else it shows a message that tells user to click the button -->
     <div v-else>
-      <p>Click the button above to learn more about the films!</p>
+      <p>{{msg}}</p>
     </div>
   </div>
 
@@ -37,13 +37,14 @@ export default {
   data() {
     return {
       show: false,
+      msg: 'Click the button above to learn more about the films!',
 
       // movies object for 'what to watch' section
       movies: [{
           name: 'Gladiator (2000)',
           about: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.',
           hook: 'This one is a classic! Epic action scenes in the colosseum, romance, betrayal, need I say more?',
-          fact: 'Joaquin Phoenix ad-libbed his scream of Am I not merciful? Connie Nielsen wasnt expecting it, and her frightened reaction was genuine.'
+          fact: "Joaquin Phoenix ad-libbed his scream of 'Am I not merciful?' Connie Nielsen wasn't expecting it, and her frightened reaction was genuine."
         },
         {
           name: 'Without a Paddle (2004)',

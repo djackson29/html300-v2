@@ -12,7 +12,7 @@
       </b-card-header>
       <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
 
-        <!-- accordion body uses v-for to grab data from week 1 array -->
+        <!-- accordion body uses v-for to grab data from week 1 object -->
         <b-card-body>
           <div v-for="week1 in week1Movies" v-bind:key="week1.id">
             <h3>{{ week1.name }}</h3>
@@ -31,7 +31,7 @@
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
 
-        <!-- accordion body uses v-for to grab data from week 2 array -->
+        <!-- accordion body uses v-for to grab data from week 2 object -->
         <b-card-body>
           <div v-for="week2 in week2Movies" v-bind:key="week2.id">
             <h3>{{ week2.name }}</h3>
@@ -50,7 +50,7 @@
       </b-card-header>
       <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
 
-        <!-- accordion body uses v-for to grab data from week 3 array -->
+        <!-- accordion body uses v-for to grab data from week 3 object -->
         <b-card-body>
           <div v-for="week3 in week3Movies" v-bind:key="week3.id">
             <h3>{{ week3.name }}</h3>
