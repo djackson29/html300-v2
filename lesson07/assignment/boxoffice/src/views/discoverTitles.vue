@@ -2,16 +2,16 @@
   <div class="discoverTitles">
     <h2>Discover New Titles</h2>
     <h3>Action</h3>
-    <div v-for="action in actionPosters" v-bind:key="action.id">
-      <img v-bind:src="action" alt="" class="img-thumbnail">
+    <div >
+      <img v-for="action in actionPosters" v-bind:key="action.id" v-bind:src="action" alt="" class="img-thumbnail">
     </div>
     <h3>Musicals</h3>
-    <div v-for="musical in musicalPosters" v-bind:key="musical.id">
-      <img v-bind:src="musical" alt="" class="img-thumbnail">
+    <div >
+      <img v-for="musical in musicalPosters" v-bind:key="musical.id" v-bind:src="musical" alt="" class="img-thumbnail">
     </div>
     <h3>Thrillers</h3>
-    <div v-for="thriller in thrillerPosters" v-bind:key="thriller.id">
-      <img v-bind:src="thriller" alt="" class="img-thumbnail">
+    <div >
+      <img v-for="thriller in thrillerPosters" v-bind:key="thriller.id" v-bind:src="thriller" alt="" class="img-thumbnail">
     </div>
   </div>
 </template>
@@ -36,5 +36,8 @@ export default {
 </script>
 
 <style>
+img {
+  margin: 10px 30px 50px 0;
+}
 
 </style>
