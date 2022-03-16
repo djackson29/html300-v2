@@ -3,18 +3,16 @@
     <h2>Discover New Titles</h2>
 
     <!-- v-for to iterate through each image array and display movie posters for each genre -->
-    <h3>Action</h3>
-    <imagesDiscover msg="Welcome to Your Vue.js App"/>
+    <images-discover title="Action"></images-discover>
+    <!-- <action-posters></action-posters> -->
     <!-- <div>
       <img v-for="action in actionPosters" v-bind:key="action.id" v-bind:src="action" alt="" class="img-thumbnail">
     </div> -->
-    <h3>Musicals</h3>
-    <imagesDiscover msg="Welcome to Your Vue.js App"/>
+    <images-discover title="Musicals"></images-discover>
     <!-- <div>
       <img v-for="musical in musicalPosters" v-bind:key="musical.id" v-bind:src="musical" alt="" class="img-thumbnail">
     </div> -->
-    <h3>Thrillers</h3>
-    <imagesDiscover msg="Welcome to Your Vue.js App"/>
+    <images-discover title="Thrillers"></images-discover>
     <!-- <div>
       <img v-for="thriller in thrillerPosters" v-bind:key="thriller.id" v-bind:src="thriller" alt="" class="img-thumbnail">
     </div> -->
@@ -24,6 +22,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <script scoped>
+
+
 import imagesDiscover from '@/components/imagesDiscover.vue'
 export default {
   name: 'discoverTitles',
@@ -33,6 +33,7 @@ export default {
   }
 
 </script>
+
 
 
 <style>
