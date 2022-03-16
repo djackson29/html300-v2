@@ -9,7 +9,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
 
-### To get started:
+<!-- ### To get started:
 - 	Fetch from the upstream master and merge with your local master as we start each lesson
 -	In your forked repo, create a new branch off of master called `lesson-07` or similar
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson07/assignment`
@@ -33,7 +33,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 	-	yarn command: run `yarn add popper.js`
 	- Follow the "Getting Started" guide for Bootstrap Vue to make the package available in your project. "Using Module Bundlers" is the applicable section: https://bootstrap-vue.org/docs#using-module-bundlers.
 -	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
--	In the project's README.md, find instructions to compile and hot reload for development. This will start the development server.
+-	In the project's README.md, find instructions to compile and hot reload for development. This will start the development server. -->
 
 
 ### Build out the Project
