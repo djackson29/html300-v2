@@ -24,6 +24,8 @@ export default {
   },
   data() {
     return {
+
+      // musical posters object with title, src, alt props
       musicalPosters: [{
           title: 'The Greatest Showman',
           src: [require('../assets/greatest-showman.jpg')],
